@@ -1,0 +1,757 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+    "name": "Anggityo Tresna Nugroho",
+    "nickname": "Agung Gumelar Nugroho",
+    "major": "Teknik Elektro",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752234789/ANGGITYO_TRESNA_NUGRAHA-removebg-preview_up4vee.png",
+    "division": {
+      "name": "Ketua",
+      "position": "Ketua",
+      "tag": "ketua",
+      "group": "inti"
+    },
+    "program": {
+      "name": "Koperasi Merah Putih",
+      "alias": "Koperasi",
+      "position": "anggota",
+      "tag": "koperasi"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/agunggumelar/"
+    }
+  },
+
+  {
+    "id": "b2c3d4e5-f6g7-8901-2345-678901bcdefg",
+    "name": "Sintia Rahmawati",
+    "nickname": "Sintia",
+    "major": "Manajemen",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752234789/Sintia_Rahmawati_Manajemen-removebg-preview_ax0y5u.png",
+    "division": {
+      "name": "Wakil Ketua",
+      "position": "Wakil Ketua",
+      "tag": "wakil-ketua",
+      "group": "inti"
+    },
+    "program": {
+      "name": "Koperasi Merah Putih",
+      "alias": "Koperasi",
+      "position": "anggota",
+      "tag": "koperasi"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/sintiarahmawati/"
+    }
+  },
+
+  {
+    "id": "c3d4e5f6-g7h8-9012-3456-789012cdefgh",
+    "name": "Nonsi Gresia",
+    "nickname": "Nonsi",
+    "major": "Ilmu Komunikasi",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752234790/Nonsi_Gresia_Ilmu_Komunikasi-removebg-preview_ituh0u.png",
+    "division": {
+      "name": "Sekretaris",
+      "position": "Sekretaris",
+      "tag": "sekretaris",
+      "group": "inti"
+    },
+    "program": {
+      "name": "Pemberdayaan dan Kesejahteraan Keluarga",
+      "alias": "PKK",
+      "position": "anggota",
+      "tag": "pkk"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/nonsigresia/"
+    }
+  },
+  {
+    "id": "d4e5f6g7-h8i9-0123-4567-890123defghi",
+    "name": "Devita Dwi Agustina",
+    "nickname": "Devita",
+    "major": "Agribisnis",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752234790/Devita_Dwi_Agustin_Agribisnis-removebg-preview_t0gydn.png",
+    "division": {
+      "name": "Sekretaris",
+      "position": "Sekretaris",
+      "tag": "sekretaris",
+      "group": "inti"
+    },
+    "program": {
+      "name": "Kelompok Wanita Tani",
+      "alias": "KWT",
+      "position": "anggota",
+      "tag": "kwt"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/devitadwi/"
+    }
+  },
+
+  {
+    "id": "e5f6g7h8-i9j0-1234-5678-901234efghij",
+    "name": "Atika Badriatul Alliah",
+    "nickname": "Atika Badriatul",
+    "major": "Manajemen",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752234789/Atika-removebg-preview_vdiepc.png",
+    "division": {
+      "name": "Bendahara",
+      "position": "Bendahara",
+      "tag": "bendahara",
+      "group": "inti"
+    },
+    "program": {
+      "name": "Usaha Mikro, Kecil, dan Menengah",
+      "alias": "UMKM",
+      "position": "anggota",
+      "tag": "umkm"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/atikabadriatul/"
+    }
+  },
+  {
+    "id": "f6g7h8i9-j0k1-2345-6789-012345fghijk",
+    "name": "Widya Tri Hardianti",
+    "nickname": "Widya",
+    "major": "Manajemen",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752234789/Widya_Tri_Hardianti___Manajemen-removebg-preview_bm93t2.png",
+    "division": {
+      "name": "Bendahara",
+      "position": "Bendahara",
+      "tag": "bendahara",
+      "group": "inti"
+    },
+    "program": {
+      "name": "Usaha Mikro, Kecil, dan Menengah",
+      "alias": "UMKM",
+      "position": "anggota",
+      "tag": "umkm"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/widyatri/"
+    }
+  },
+
+  {
+    "id": "g7h8i9j0-k1l2-3456-7890-123456ghijkl",
+    "name": "Qoriatul Laila",
+    "nickname": "Qori",
+    "major": "Manajemen",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329174/cah_doll-removebg-preview_rjm4dm.png",
+    "division": {
+      "name": "PDD",
+      "position": "anggota",
+      "tag": "pdd",
+      "group": "pdd"
+    },
+    "program": {
+      "name": "Koperasi Merah Putih",
+      "alias": "Koperasi",
+      "position": "anggota",
+      "tag": "koperasi"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/qorilaila/"
+    }
+  },
+  {
+    "id": "h8i9j0k1-l2m3-4567-8901-234567hijklm",
+    "name": "Muhammad Fauzi Nur Aziz",
+    "nickname": "Aziz",
+    "major": "Teknik Informatika",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329174/Muhammad_Fauzi_Nur_Aziz_ik8hpr.png",
+    "division": {
+      "name": "PDD",
+      "position": "anggota",
+      "tag": "pdd",
+      "group": "pdd"
+    },
+    "program": {
+      "name": "Pemberdayaan dan Kesejahteraan Keluarga",
+      "alias": "PKK",
+      "position": "anggota",
+      "tag": "pkk"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/fauzi.n4_/"
+    }
+  },
+  {
+    "id": "i9j0k1l2-m3n4-5678-9012-345678ijklmn",
+    "name": "Firman Sukma Adiningrat",
+    "nickname": "Firman",
+    "major": "Teknik Informatika",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329174/Firman-removebg-preview_xmm5jk.png",
+    "division": {
+      "name": "PDD",
+      "position": "anggota",
+      "tag": "pdd",
+      "group": "pdd"
+    },
+    "program": {
+      "name": "Kelompok Wanita Tani",
+      "alias": "KWT",
+      "position": "anggota",
+      "tag": "kwt"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/firmansukma/"
+    }
+  },
+  {
+    "id": "j0k1l2m3-n4o5-6789-0123-456789jklmno",
+    "name": "Muhammad Risqy Zunury",
+    "nickname": "Risqi",
+    "major": "Ilmu Ternak",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329173/Risqi-removebg-preview_w6gcsb.png",
+    "division": {
+      "name": "PDD",
+      "position": "anggota",
+      "tag": "pdd",
+      "group": "pdd"
+    },
+    "program": {
+      "name": "Bank Sampah",
+      "alias": "Rosok",
+      "position": "anggota",
+      "tag": "bank-sampah"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/risqyzunury/"
+    }
+  },
+  {
+    "id": "k1l2m3n4-o5p6-7890-1234-567890klmnop",
+    "name": "Wafiq Nur Azizah",
+    "nickname": "Wafiq",
+    "major": "Administrasi Negara",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329174/Wafiq_Nur_Azizah_e7pwyq.png",
+    "division": {
+      "name": "PDD",
+      "position": "anggota",
+      "tag": "pdd",
+      "group": "pdd"
+    },
+    "program": {
+      "name": "Usaha Mikro, Kecil, dan Menengah",
+      "alias": "UMKM",
+      "position": "anggota",
+      "tag": "umkm"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/wafiqnur/"
+    }
+  },
+  {
+    "id": "l2m3n4o5-p6q7-8901-2345-678901lmnopq",
+    "name": "Muhammad Afwa Nawafal",
+    "nickname": "Afwa",
+    "major": "Teknik Informatika",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329174/Afwa-removebg-preview_wypz1s.png",
+    "division": {
+      "name": "PDD",
+      "position": "anggota",
+      "tag": "pdd",
+      "group": "pdd"
+    },
+    "program": {
+      "name": "Usaha Mikro, Kecil, dan Menengah",
+      "alias": "UMKM",
+      "position": "anggota",
+      "tag": "umkm"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/afwanawafal/"
+    }
+  },
+  {
+    "id": "m3n4o5p6-q7r8-9012-3456-789012mnopqr",
+    "name": "Anin Hasanatul",
+    "nickname": "Anin",
+    "major": "Administrasi Niaga",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329173/WhatsApp_Image_2025-07-05_at_19.53.40_54c69701-removebg-preview_jvvb2r.png",
+    "division": {
+      "name": "PDD",
+      "position": "anggota",
+      "tag": "pdd",
+      "group": "pdd"
+    },
+    "program": {
+      "name": "Koperasi Merah Putih",
+      "alias": "Koperasi",
+      "position": "anggota",
+      "tag": "koperasi"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/aninhasanatul/"
+    }
+  },
+
+  {
+    "id": "n4o5p6q7-r8s9-0123-4567-890123nopqrs",
+    "name": "Dafan Syauqi Ramadhan",
+    "nickname": "Dafan",
+    "major": "Akuntansi",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329450/Dafan_Syauqi_-_Akuntansi-removebg-preview_yzs1om.png",
+    "division": {
+      "name": "Perkap",
+      "position": "anggota",
+      "tag": "perkap",
+      "group": "perkap"
+    },
+    "program": {
+      "name": "Usaha Mikro, Kecil, dan Menengah",
+      "alias": "UMKM",
+      "position": "anggota",
+      "tag": "umkm"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/dafansyauqi/"
+    }
+  },
+  {
+    "id": "o5p6q7r8-s9t0-1234-5678-901234opqrst",
+    "name": "Imelia Dwi Andika",
+    "nickname": "Imelia",
+    "major": "Akuntansi",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329446/Imelia_Dwi_A_Akuntansi-removebg-preview_1_xg1lv1.png",
+    "division": {
+      "name": "Perkap",
+      "position": "anggota",
+      "tag": "perkap",
+      "group": "perkap"
+    },
+    "program": {
+      "name": "Pemberdayaan dan Kesejahteraan Keluarga",
+      "alias": "PKK",
+      "position": "anggota",
+      "tag": "pkk"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/imeliadwi/"
+    }
+  },
+  {
+    "id": "p6q7r8s9-t0u1-2345-6789-012345pqrstu",
+    "name": "Riski Ega Amelia",
+    "nickname": "Riski Ega",
+    "major": "Manajemen",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329446/Riski_Ega_Amelia_Manajemen-removebg-preview_znkyas.png",
+    "division": {
+      "name": "Perkap",
+      "position": "anggota",
+      "tag": "perkap",
+      "group": "perkap"
+    },
+    "program": {
+      "name": "Pemberdayaan dan Kesejahteraan Keluarga",
+      "alias": "PKK",
+      "position": "anggota",
+      "tag": "pkk"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/riskiega/"
+    }
+  },
+  {
+    "id": "q7r8s9t0-u1v2-3456-7890-123456qrstuv",
+    "name": "Ema Herlina Utomo",
+    "nickname": "Ema Herlina",
+    "major": "Ilmu Hukum",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329445/Ema_Herlina_Utomo_Ilmu_Hukum-removebg-preview_xmdfof.png",
+    "division": {
+      "name": "Perkap",
+      "position": "anggota",
+      "tag": "perkap",
+      "group": "perkap"
+    },
+    "program": {
+      "name": "Koperasi Merah Putih",
+      "alias": "Koperasi",
+      "position": "anggota",
+      "tag": "koperasi"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/emaherlina/"
+    }
+  },
+  {
+    "id": "r8s9t0u1-v2w3-4567-8901-234567rstuvw",
+    "name": "Sigit Setyo Bintoro",
+    "nickname": "Sigit",
+    "major": "Ilmu Hukum",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329447/WhatsApp_Image_2025-07-05_at_16.51.16_3c58d98b-removebg-preview_lcnpog.png",
+    "division": {
+      "name": "Perkap",
+      "position": "anggota",
+      "tag": "perkap",
+      "group": "perkap"
+    },
+    "program": {
+      "name": "Koperasi Merah Putih",
+      "alias": "Koperasi",
+      "position": "anggota",
+      "tag": "koperasi"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/sigitsetyo/"
+    }
+  },
+
+  {
+    "id": "s9t0u1v2-w3x4-5678-9012-345678stuvwx",
+    "name": "Eko Aldi Prabowo",
+    "nickname": "Aldi",
+    "major": "Administrasi Negara",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329316/Eko_Aldi_Prabowo_Administrasi_negara-removebg-preview_nglcny.png",
+    "division": {
+      "name": "Humas",
+      "position": "anggota",
+      "tag": "humas",
+      "group": "humas"
+    },
+    "program": {
+      "name": "Bank Sampah",
+      "alias": "Rosok",
+      "position": "anggota",
+      "tag": "bank-sampah"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/ekoaldi/"
+    }
+  },
+  {
+    "id": "t0u1v2w3-x4y5-6789-0123-456789tuvwxy",
+    "name": "Asshyfatul Aina Ni'Mah",
+    "nickname": "Asyifa",
+    "major": "Teknik Informatika",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329316/Asshyffatul_Aina_Ni_mah-removebg-preview_euceei.png",
+    "division": {
+      "name": "Humas",
+      "position": "anggota",
+      "tag": "humas",
+      "group": "humas"
+    },
+    "program": {
+      "name": "Bank Sampah",
+      "alias": "Rosok",
+      "position": "anggota",
+      "tag": "bank-sampah"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/asshyfatul/"
+    }
+  },
+  {
+    "id": "u1v2w3x4-y5z6-7890-1234-567890uvwxyz",
+    "name": "Suprianto",
+    "nickname": "Suprianto",
+    "major": "Ilmu Ternak",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329315/Suprianto_Ilmu_Ternak-removebg-preview_iijmvt.png",
+    "division": {
+      "name": "Humas",
+      "position": "anggota",
+      "tag": "humas",
+      "group": "humas"
+    },
+    "program": {
+      "name": "Usaha Mikro, Kecil, dan Menengah",
+      "alias": "UMKM",
+      "position": "anggota",
+      "tag": "umkm"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/suprianto/"
+    }
+  },
+  {
+    "id": "v2w3x4y5-z6a7-8901-2345-678901vwxyza",
+    "name": "Murbo ikhwanto",
+    "nickname": "Murbo",
+    "major": "Sistem Komputer",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329315/Murbo_Ikhwanto_sistem_komputer_24104423039-removebg-preview_hzcyjo.png",
+    "division": {
+      "name": "Humas",
+      "position": "anggota",
+      "tag": "humas",
+      "group": "humas"
+    },
+    "program": {
+      "name": "Koperasi Merah Putih",
+      "alias": "Koperasi",
+      "position": "anggota",
+      "tag": "koperasi"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/murboikhwanto/"
+    }
+  },
+  {
+    "id": "w3x4y5z6-a7b8-9012-3456-789012wxyzab",
+    "name": "Lukman Jauhari",
+    "nickname": "Lukman",
+    "major": "PGSD",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329314/lukmanjauharipgsd-removebg-preview_mgdk0n.png",
+    "division": {
+      "name": "Humas",
+      "position": "anggota",
+      "tag": "humas",
+      "group": "humas"
+    },
+    "program": {
+      "name": "Pemberdayaan dan Kesejahteraan Keluarga",
+      "alias": "PKK",
+      "position": "anggota",
+      "tag": "pkk"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/lukmanjauhari/"
+    }
+  },
+
+  {
+    "id": "x4y5z6a7-b8c9-0123-4567-890123xyzabc",
+    "name": "Mohammad Krisna Firmansyah",
+    "nickname": "Krisna",
+    "major": "Akuntansi",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329702/M_KRISNA_F_-_AKUNTANSI_-removebg-preview_xunbxf.png",
+    "division": {
+      "name": "Acara",
+      "position": "anggota",
+      "tag": "acara",
+      "group": "acara"
+    },
+    "program": {
+      "name": "Bank Sampah",
+      "alias": "Rosok",
+      "position": "anggota",
+      "tag": "bank-sampah"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/krisnafirmansyah/"
+    }
+  },
+  {
+    "id": "y5z6a7b8-c9d0-1234-5678-901234yzabcd",
+    "name": "Anindia Khusnul Rosiana",
+    "nickname": "Anindia",
+    "major": "Sistem Komputer",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329708/Anindia_Sistem_Komputer-removebg-preview_xywui4.png",
+    "division": {
+      "name": "Acara",
+      "position": "anggota",
+      "tag": "acara",
+      "group": "acara"
+    },
+    "program": {
+      "name": "Usaha Mikro, Kecil, dan Menengah",
+      "alias": "UMKM",
+      "position": "anggota",
+      "tag": "umkm"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/anindiakhusnul/"
+    }
+  },
+  {
+    "id": "z6a7b8c9-d0e1-2345-6789-012345zabcde",
+    "name": "Arvina Salshabilla Tria Nanda",
+    "nickname": "Bella",
+    "major": "Teknik Sipil",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329709/ARVINA_SALSHABILLA_TRIA_NANDA-TEKNIK_SIPIL-removebg-preview_lorp7u.png",
+    "division": {
+      "name": "Acara",
+      "position": "anggota",
+      "tag": "acara",
+      "group": "acara"
+    },
+    "program": {
+      "name": "Bank Sampah",
+      "alias": "Rosok",
+      "position": "anggota",
+      "tag": "bank-sampah"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/arvinabella/"
+    }
+  },
+  {
+    "id": "a7b8c9d0-e1f2-3456-7890-123456abcdef",
+    "name": "Fitria Nikmatu Rohmah",
+    "nickname": "Fitria",
+    "major": "Pendidikan Biologi",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329710/Fitria_Nikmatu_Rohmah_-pendidikan_biologi_ogn3to.png",
+    "division": {
+      "name": "Acara",
+      "position": "anggota",
+      "tag": "acara",
+      "group": "acara"
+    },
+    "program": {
+      "name": "Kelompok Wanita Tani",
+      "alias": "KWT",
+      "position": "anggota",
+      "tag": "kwt"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/fitrianikma/"
+    }
+  },
+  {
+    "id": "b8c9d0e1-f2g3-4567-8901-234567bcdefg",
+    "name": "Febi Adhari",
+    "nickname": "Febi",
+    "major": "PGSD",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329709/Febi_Adhari_-_PGSD-removebg-preview_lqqvny.png",
+    "division": {
+      "name": "Acara",
+      "position": "anggota",
+      "tag": "acara",
+      "group": "acara"
+    },
+    "program": {
+      "name": "Koperasi Merah Putih",
+      "alias": "Koperasi",
+      "position": "anggota",
+      "tag": "koperasi"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/febiadhari/"
+    }
+  },
+  {
+    "id": "c9d0e1f2-g3h4-5678-9012-345678cdefgh",
+    "name": "Rizka Cahya Kamila",
+    "nickname": "Riska Cahya",
+    "major": "Manajemen",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329703/Riska-removebg-preview_r2j5gi.png",
+    "division": {
+      "name": "Acara",
+      "position": "anggota",
+      "tag": "acara",
+      "group": "acara"
+    },
+    "program": {
+      "name": "Pemberdayaan dan Kesejahteraan Keluarga",
+      "alias": "PKK",
+      "position": "anggota",
+      "tag": "pkk"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/rizkacahya/"
+    }
+  },
+  {
+    "id": "d0e1f2g3-h4i5-6789-0123-456789defghi",
+    "name": "Yemi Anggarwati",
+    "nickname": "Yemi",
+    "major": "Administrasi Negara",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329704/Yemi_Anggarwati_Ilmu_Administrasi_Negara_085855630716-removebg-preview_ivkfxg.png",
+    "division": {
+      "name": "Acara",
+      "position": "anggota",
+      "tag": "acara",
+      "group": "acara"
+    },
+    "program": {
+      "name": "Kelompok Wanita Tani",
+      "alias": "KWT",
+      "position": "anggota",
+      "tag": "kwt"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/yemianggarwati/"
+    }
+  },
+  {
+    "id": "e1f2g3h4-i5j6-7890-1234-567890efghij",
+    "name": "Amalia Fatimatuz Zahro",
+    "nickname": "Amalia Zahra",
+    "major": "Ilmu Komunikasi",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329705/amelia-removebg-preview_jknym7.png",
+    "division": {
+      "name": "Acara",
+      "position": "anggota",
+      "tag": "acara",
+      "group": "acara"
+    },
+    "program": {
+      "name": "Bank Sampah",
+      "alias": "Rosok",
+      "position": "anggota",
+      "tag": "bank-sampah"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/amaliazahra/"
+    }
+  },
+  {
+    "id": "f2g3h4i5-j6k7-8901-2345-678901fghijk",
+    "name": "Adelia Debbyanzahrani",
+    "nickname": "Adelia Debbyan",
+    "major": "Ilmu Komunikasi",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329706/Adelia_Debbyan_Z_ILMU_KOMUNIKASI-removebg-preview_zwwewx.png",
+    "division": {
+      "name": "Acara",
+      "position": "anggota",
+      "tag": "acara",
+      "group": "acara"
+    },
+    "program": {
+      "name": "Kelompok Wanita Tani",
+      "alias": "KWT",
+      "position": "anggota",
+      "tag": "kwt"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/adeliadebbyan/"
+    }
+  },
+  {
+    "id": "g3h4i5j6-k7l8-9012-3456-789012ghijkl",
+    "name": "Yongky Pradipta Alfanso",
+    "nickname": "Yongky",
+    "major": "Manajemen",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329704/Yongki-removebg-preview_qiyr38.png",
+    "division": {
+      "name": "Acara",
+      "position": "anggota",
+      "tag": "acara",
+      "group": "acara"
+    },
+    "program": {
+      "name": "Kelompok Wanita Tani",
+      "alias": "KWT",
+      "position": "anggota",
+      "tag": "kwt"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/yongkypradipta/"
+    }
+  },
+  {
+    "id": "h4i5j6k7-l8m9-0123-4567-890123hijklm",
+    "name": "Anggi Ischal Labedha",
+    "nickname": "Anggi Ischal",
+    "major": "Manajemen",
+    "image": "https://res.cloudinary.com/dxwmdooxc/image/upload/v1752329707/Anggi_Iscal_Labedha_opo6fh.png",
+    "division": {
+      "name": "Acara",
+      "position": "anggota",
+      "tag": "acara",
+      "group": "acara"
+    },
+    "program": {
+      "name": "Kelompok Wanita Tani",
+      "alias": "KWT",
+      "position": "anggota",
+      "tag": "kwt"
+    },
+    "socialMedia": {
+      "instagram": "http://instagram.com/anggiischal/"
+    }
+  }
+]
