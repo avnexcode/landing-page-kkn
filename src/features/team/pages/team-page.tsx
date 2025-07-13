@@ -1,4 +1,4 @@
-import { Pagination } from "@/components/fragments";
+import { Pagination, Searchbar } from "@/components/fragments";
 import { PageContainer, SectionContainer } from "@/components/layouts";
 import { Heading } from "@/components/ui/heading";
 import { useQueryParams } from "@/hooks";
@@ -19,14 +19,21 @@ export const TeamPage = () => {
       <SectionContainer container className="mb-10 pt-20 xl:mb-20 xl:pt-32">
         <Heading className="mb-20 text-center">Team</Heading>
 
-        <TeamFilter className="mb-20" />
+        <header className="mb-10 xl:mb-20">
+          <div className="mb-5 flex flex-col space-y-5 xl:flex-row">
+            <TeamFilter className="w-full" />
 
-        <Pagination
-          total={students?.meta.total ?? 0}
-          currentPage={queryParams.page}
-          limit={queryParams.limit}
-          onPageChange={(page) => handleUpdateQuery({ page })}
-        />
+            <Pagination
+              total={students?.meta.total ?? 0}
+              currentPage={queryParams.page}
+              limit={queryParams.limit}
+              onPageChange={(page) => handleUpdateQuery({ page })}
+              className="flex justify-end xl:max-w-fit"
+            />
+          </div>
+
+          <Searchbar />
+        </header>
 
         <TeamList
           students={students?.data}

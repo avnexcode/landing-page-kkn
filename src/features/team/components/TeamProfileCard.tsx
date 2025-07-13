@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { ExternalLink, Target, User } from "lucide-react";
 import type { Student } from "../types";
+import Image from "next/image";
 
 type TeamProfileCardProps = {
   student: Student;
@@ -14,11 +15,12 @@ export const TeamProfileCard = (props: TeamProfileCardProps) => {
         <CardHeader className="pb-4">
           <div className="relative">
             <div className="relative mx-auto mb-4 h-60 w-60">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={props.student.image}
                 alt={`${props.student.name} - KKN Team`}
                 className="border-muted h-full w-full rounded-full border-4 object-cover shadow-md transition-shadow duration-300 group-hover:shadow-lg"
+                width={2000}
+                height={2000}
               />
               <div className="from-foreground/20 absolute inset-0 rounded-full bg-gradient-to-t to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </div>

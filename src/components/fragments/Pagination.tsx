@@ -7,8 +7,10 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { cn } from "@/lib/utils";
 
 type PaginationProps = {
+  className?: string;
   total: number;
   currentPage: number;
   limit: number;
@@ -16,6 +18,7 @@ type PaginationProps = {
 };
 
 export const Pagination = ({
+  className,
   total,
   currentPage,
   limit,
@@ -37,7 +40,7 @@ export const Pagination = ({
   }
 
   return (
-    <PaginationComponent>
+    <PaginationComponent className={cn("w-full", className)}>
       <PaginationContent>
         <PaginationItem>
           <PaginationPrevious
