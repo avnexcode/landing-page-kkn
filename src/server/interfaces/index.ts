@@ -1,3 +1,13 @@
+export interface PaginatedResponse<T> {
+  data: T[];
+  meta: {
+    total: number;
+    limit: number;
+    page: number;
+    last_page: number;
+  };
+}
+
 export interface Student {
   id: string;
   name: string;
@@ -6,7 +16,7 @@ export interface Student {
   image: string;
   division: {
     name: string;
-    position: string;
+    position?: string;
     tag: string;
   };
   program: {
@@ -18,4 +28,11 @@ export interface Student {
   socialMedia: {
     instagram: string;
   };
+}
+
+export interface Schedule {
+  id: string;
+  day: string;
+  studentsID: string[];
+  studentLeadId: string;
 }

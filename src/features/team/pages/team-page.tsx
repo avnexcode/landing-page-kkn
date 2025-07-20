@@ -8,11 +8,12 @@ import { TeamFilter, TeamList } from "../components";
 export const TeamPage = () => {
   const { queryParams, handleUpdateQuery } = useQueryParams();
 
-  const { data: students, isLoading } = api.student.getAll.useQuery({
-    params: {
-      ...queryParams,
-    },
-  });
+  const { data: students, isLoading: isStudentsLoading } =
+    api.student.getAll.useQuery({
+      params: {
+        ...queryParams,
+      },
+    });
 
   return (
     <PageContainer withHeader withFooter title="Team">
@@ -38,7 +39,7 @@ export const TeamPage = () => {
         <TeamList
           students={students?.data}
           meta={students?.meta}
-          isLoading={isLoading}
+          isStudentsLoading={isStudentsLoading}
         />
       </SectionContainer>
     </PageContainer>

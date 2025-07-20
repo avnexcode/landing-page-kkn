@@ -15,17 +15,17 @@ type TeamListProps = {
     page: number;
     last_page: number;
   };
-  isLoading?: boolean;
+  isStudentsLoading?: boolean;
 };
 
 export const TeamList = ({
   className,
   showMoreButton = false,
   students,
-  isLoading,
+  isStudentsLoading,
   meta,
 }: TeamListProps) => {
-  if (isLoading) {
+  if (isStudentsLoading) {
     return (
       <div
         className={cn(

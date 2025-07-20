@@ -20,4 +20,19 @@ export const studentRouter = createTRPCRouter({
         return errorFilter(error);
       }
     }),
+
+  getManyByIDs: publicProcedure
+    .input(
+      z.object({
+        ids: z.string().array(),
+      }),
+    )
+    .query(async ({ input: { ids } }) => {
+      try {
+        const students = await StudentService.getManyByIDs(ids);
+        return students;
+      } catch (error) {
+        return errorFilter(error);
+      }
+    }),
 });

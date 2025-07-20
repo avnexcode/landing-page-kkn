@@ -1,9 +1,11 @@
 import type { StudentQueryParams } from "@/server/types";
-import studentData from "../../data/student.json";
-import type { Student } from "@/server/interfaces";
+import studentData from "../../data/students.json";
+import type { PaginatedResponse, Student } from "@/server/interfaces";
 
 export class StudentRepository {
-  static findAll = async (params: StudentQueryParams) => {
+  static findAll = async (
+    params: StudentQueryParams,
+  ): Promise<PaginatedResponse<Student>> => {
     const { search, limit = 10, page = 1, division, program } = params;
 
     let filteredData = studentData as Student[];
@@ -44,5 +46,15 @@ export class StudentRepository {
         last_page: lastPage,
       },
     };
+  };
+
+  static findManyByIDs = async (ids: string[]): Promise<Student[]> => {
+    const students = studentData as Student[];
+
+    const filteredStudents = students.filter((student) => {
+      return ids.includes(student.id);
+    });
+
+    return filteredStudents;
   };
 }

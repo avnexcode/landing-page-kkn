@@ -1,1 +1,2 @@
-export * from "./studentRouter";
+export * from "./student";
+export * from "./schedule";

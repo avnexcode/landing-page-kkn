@@ -1,0 +1,77 @@
+[
+  {
+    "id": "b3f1e2d4-a6c7-4321-8765-123456abcdef",
+    "day": "senin",
+    "studentsID": [
+      "n4o5p6q7-r8s9-0123-4567-890123nopqrs",
+      "t0u1v2w3-x4y5-6789-0123-456789tuvwxy",
+      "f6g7h8i9-j0k1-2345-6789-012345fghijk",
+      "h4i5j6k7-l8m9-0123-4567-890123hijklm",
+      "a1b2c3d4-e5f6-7890-1234-567890abcdef"
+    ],
+    "studentLeadId": "n4o5p6q7-r8s9-0123-4567-890123nopqrs"
+  },
+  {
+    "id": "d2e3f4a5-b1c2-5432-7890-abcdef123456",
+    "day": "selasa",
+    "studentsID": [
+      "y5z6a7b8-c9d0-1234-5678-901234yzabcd",
+      "l2m3n4o5-p6q7-8901-2345-678901lmnopq",
+      "u1v2w3x4-y5z6-7890-1234-567890uvwxyz",
+      "k1l2m3n4-o5p6-7890-1234-567890klmnop",
+      "g7h8i9j0-k1l2-3456-7890-123456ghijkl"
+    ],
+    "studentLeadId": "y5z6a7b8-c9d0-1234-5678-901234yzabcd"
+  },
+  {
+    "id": "c1d2e3f4-a5b6-6543-2109-fedcba654321",
+    "day": "rabu",
+    "studentsID": [
+      "i9j0k1l2-m3n4-5678-9012-345678ijklmn",
+      "d4e5f6g7-h8i9-0123-4567-890123defghi",
+      "a7b8c9d0-e1f2-3456-7890-123456abcdef",
+      "f2g3h4i5-j6k7-8901-2345-678901fghijk",
+      "g3h4i5j6-k7l8-9012-3456-789012ghijkl"
+    ],
+    "studentLeadId": "i9j0k1l2-m3n4-5678-9012-345678ijklmn"
+  },
+  {
+    "id": "e4f5a6b7-c8d9-7654-3210-123abc456def",
+    "day": "kamis",
+    "studentsID": [
+      "e1f2g3h4-i5j6-7890-1234-567890efghij",
+      "x4y5z6a7-b8c9-0123-4567-890123xyzabc",
+      "z6a7b8c9-d0e1-2345-6789-012345zabcde",
+      "j0k1l2m3-n4o5-6789-0123-456789jklmno",
+      "t0u1v2w3-x4y5-6789-0123-456789tuvwxy",
+      "s9t0u1v2-w3x4-5678-9012-345678stuvwx"
+    ],
+    "studentLeadId": "e1f2g3h4-i5j6-7890-1234-567890efghij"
+  },
+  {
+    "id": "a5b6c7d8-e9f0-8765-4321-abcdef789012",
+    "day": "jum'at",
+    "studentsID": [
+      "c3d4e5f6-g7h8-9012-3456-789012cdefgh",
+      "h8i9j0k1-l2m3-4567-8901-234567hijklm",
+      "o5p6q7r8-s9t0-1234-5678-901234opqrst",
+      "c9d0e1f2-g3h4-5678-9012-345678cdefgh",
+      "p6q7r8s9-t0u1-2345-6789-012345pqrstu",
+      "w3x4y5z6-a7b8-9012-3456-789012wxyzab"
+    ],
+    "studentLeadId": "c3d4e5f6-g7h8-9012-3456-789012cdefgh"
+  },
+  {
+    "id": "f6a7b8c9-d0e1-9876-5432-fedcba321098",
+    "day": "sabtu",
+    "studentsID": [
+      "q7r8s9t0-u1v2-3456-7890-123456qrstuv",
+      "b8c9d0e1-f2g3-4567-8901-234567bcdefg",
+      "b2c3d4e5-f6g7-8901-2345-678901bcdefg",
+      "m3n4o5p6-q7r8-9012-3456-789012mnopqr",
+      "v2w3x4y5-z6a7-8901-2345-678901vwxyza",
+      "r8s9t0u1-v2w3-4567-8901-234567rstuvw"
+    ],
+    "studentLeadId": "q7r8s9t0-u1v2-3456-7890-123456qrstuv"
+  }
+]

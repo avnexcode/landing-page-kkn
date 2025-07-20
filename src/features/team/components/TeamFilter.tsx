@@ -140,7 +140,7 @@ export const TeamFilter = ({ className, onFilterChange }: TeamFilterProps) => {
               variant={currentDivision === d.tag ? "default" : "outline"}
               size="sm"
               onClick={() => handleSetDivision(d.tag)}
-              className={`group relative overflow-hidden rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ease-in-out ${
+              className={`group relative cursor-pointer overflow-hidden rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ease-in-out ${
                 currentDivision === d.tag
                   ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow"
                   : "bg-background text-foreground hover:bg-muted/60 hover:text-foreground hover:border-border/80 border"
@@ -162,7 +162,7 @@ export const TeamFilter = ({ className, onFilterChange }: TeamFilterProps) => {
               variant={currentProgram === w.tag ? "default" : "outline"}
               size="sm"
               onClick={() => handleSetProgram(w.tag)}
-              className={`group relative overflow-hidden rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ease-in-out ${
+              className={`group relative cursor-pointer overflow-hidden rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ease-in-out ${
                 currentProgram === w.tag
                   ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow"
                   : "bg-background text-foreground hover:bg-muted/60 hover:text-foreground hover:border-border/80 border"

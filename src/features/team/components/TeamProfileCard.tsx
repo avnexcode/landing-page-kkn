@@ -25,14 +25,16 @@ export const TeamProfileCard = (props: TeamProfileCardProps) => {
               <div className="from-foreground/20 absolute inset-0 rounded-full bg-gradient-to-t to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </div>
 
-            <div className="text-center">
+            <div className="text-center capitalize">
               <h3 className="text-foreground mb-1 text-lg font-semibold">
                 {props.student.name}
               </h3>
               <Badge
                 variant="secondary"
-                className="bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                className="bg-secondary text-secondary-foreground hover:bg-secondary/80 uppercase"
               >
+                {props.student.division.position ??
+                  props.student.division.position}{" "}
                 {props.student.division.name}
               </Badge>
             </div>
@@ -42,13 +44,14 @@ export const TeamProfileCard = (props: TeamProfileCardProps) => {
         <CardContent className="space-y-4">
           <div className="text-muted-foreground flex items-center gap-2 text-sm">
             <User className="text-muted-foreground/70 h-4 w-4" />
-            <span>{props.student.major}</span>
+            <span className="capitalize">{props.student.major}</span>
           </div>
 
           <div className="text-muted-foreground flex items-start gap-2 text-sm">
             <Target className="text-muted-foreground/70 mt-0.5 h-4 w-4 flex-shrink-0" />
-            <span className="leading-relaxed">
-              {props.student.program.name} ({props.student.program.alias})
+            <span className="leading-relaxed capitalize">
+              {props.student.program.name}{" "}
+              <span className="uppercase">({props.student.program.alias})</span>
             </span>
           </div>
 

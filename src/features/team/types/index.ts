@@ -6,7 +6,7 @@ export type Student = {
   image: string;
   division: {
     name: string;
-    position: string;
+    position?: string;
     tag: string;
   };
   program: {
