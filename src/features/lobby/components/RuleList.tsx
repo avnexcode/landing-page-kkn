@@ -5,7 +5,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { renderElements } from "@/utils";
-import { RegulationList } from "./RegulationList";
 
 export const RuleList = () => {
   type RuleGroupType = {
@@ -126,12 +125,12 @@ export const RuleList = () => {
           );
         },
       })}
-      <AccordionItem value="item-1">
+      {/* <AccordionItem value="item-1">
         <AccordionTrigger>Ketentuan Denda</AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <RegulationList />
         </AccordionContent>
-      </AccordionItem>
+      </AccordionItem> */}
     </Accordion>
   );
 };
