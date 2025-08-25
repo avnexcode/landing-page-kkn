@@ -81,19 +81,35 @@ export const AboutSection = ({ sectionId, className }: AboutSectionProps) => {
             },
           })}
         </div>
-        <div className="text-foreground text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-          accusamus, incidunt ipsum non dicta maiores! Dolore beatae incidunt
-          enim ipsa aliquid dolores delectus error a aperiam! Eius illo
-          quibusdam ut veniam sed quis provident harum distinctio facilis
-          temporibus! Minus quis quam quidem excepturi omnis, voluptas, vel,
-          nostrum ratione adipisci a nesciunt incidunt iure dolorem accusamus
-          itaque possimus aliquam inventore sint. Vitae doloribus quasi natus
-          corporis. Voluptatem esse, totam consectetur eos nesciunt mollitia
-          dolorum hic nobis excepturi. Corporis nobis accusantium explicabo,
-          delectus error, est libero, nesciunt quidem vero eveniet qui
-          voluptates officiis aperiam similique ad doloremque natus eum adipisci
-          ab officia?
+        <div className="text-foreground space-y-5 text-justify">
+          <p>
+            {" "}
+            Kelompok Kuliah Kerja Nyata (KKN) 12 Plosokerep terdiri atas 34
+            mahasiswa Universitas Islam Balitar yang berasal dari berbagai
+            program studi. Keberagaman latar belakang keilmuan tersebut menjadi
+            potensi sekaligus kekuatan utama bagi kelompok kami dalam
+            melaksanakan program kerja serta kegiatan pengabdian kepada
+            masyarakat.{" "}
+          </p>{" "}
+          <p>
+            {" "}
+            Kehadiran kami di Kelurahan Plosokerep dilandasi semangat untuk
+            belajar, berbagi, serta memberikan kontribusi nyata kepada
+            masyarakat. Seluruh program yang dilaksanakan merupakan hasil
+            kolaborasi ide, kreativitas, dan kepedulian bersama, sehingga
+            diharapkan mampu memberikan manfaat baik bagi warga maupun bagi
+            mahasiswa yang terlibat.{" "}
+          </p>{" "}
+          <p>
+            {" "}
+            Kegiatan KKN bukan hanya sebatas kewajiban akademik, melainkan juga
+            merupakan wadah pembelajaran kehidupan. Melalui kegiatan ini, kami
+            memperoleh pengalaman berharga mengenai arti kebersamaan, nilai
+            gotong royong, serta kedekatan dengan masyarakat. Dengan mengusung
+            semboyan *“Bersatu, Berkarya, Bermanfaat”*, kelompok kami meyakini
+            bahwa pengalaman selama pelaksanaan KKN akan menjadi bekal penting
+            dalam menghadapi tantangan di masa yang akan datang.{" "}
+          </p>
         </div>
       </main>
     </section>
