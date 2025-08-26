@@ -36,3 +36,10 @@ export interface Schedule {
   studentsID: string[];
   studentLeadId: string;
 }
+
+export interface Gallery {
+  id: string;
+  title: string;
+  image: string;
+  orientation: "landscape" | "portrait";
+}

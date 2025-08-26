@@ -21,6 +21,7 @@ export const TeamProfileCard = (props: TeamProfileCardProps) => {
                 className="border-muted h-full w-full rounded-full border-4 object-cover shadow-md transition-shadow duration-300 group-hover:shadow-lg"
                 width={2000}
                 height={2000}
+                loading="lazy"
               />
               <div className="from-foreground/20 absolute inset-0 rounded-full bg-gradient-to-t to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </div>

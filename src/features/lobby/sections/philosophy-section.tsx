@@ -1,6 +1,7 @@
 import { Heading } from "@/components/ui/heading";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type PhilosophySectionProps = {
   sectionId: string;
@@ -13,12 +14,27 @@ export const PhilosophySection = ({
 }: PhilosophySectionProps) => {
   return (
     <section id={sectionId} className={cn("py-12", className)}>
-      <Heading size={"h3"} className="text-center uppercase">
-        Filosofi Logo
-      </Heading>
+      {/* Judul */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <Heading size={"h3"} className="text-center uppercase">
+          Filosofi Logo
+        </Heading>
+      </motion.div>
 
       <main className="grid grid-cols-1 gap-5 pt-10 xl:grid-cols-2">
-        <div className="mb-8 flex w-full items-center justify-center">
+        {/* Logo */}
+        <motion.div
+          className="mb-8 flex w-full items-center justify-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xs xl:max-w-sm">
             <Image
               src="https://res.cloudinary.com/dxwmdooxc/image/upload/v1751990804/logo-kkn_ctqytx.png"
@@ -28,53 +44,55 @@ export const PhilosophySection = ({
               className="h-auto w-full rounded-full border"
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="space-y-6 leading-relaxed text-zinc-700 dark:text-zinc-300">
-          <div className="rounded-lg border-l-4 border-blue-500 bg-zinc-50 p-4 dark:bg-blue-950">
-            <p className="text-justify">
-              <span className="font-semibold text-blue-700 dark:text-blue-400">
-                Lingkaran Utama :
-              </span>
-              <span className="ml-2">
-                Melambangkan kesatuan, kontinuitas, dan komitmen berkelanjutan
-                kelompok KKN terhadap pengabdian masyarakat. Bentuk melingkar
-                menyiratkan semangat kolaboratif tanpa ujung, di mana setiap
-                individu saling mendukung dalam harmoni.
-              </span>
-            </p>
-          </div>
-
-          <div className="rounded-lg border-l-4 border-green-500 bg-zinc-50 p-4 dark:bg-green-950">
-            <p className="text-justify">
-              <span className="font-semibold text-green-700 dark:text-green-400">
-                Simbol Tangan Berjabat Mewakili :
-              </span>
-              <span className="ml-2">
-                Kerja sama erat antara mahasiswa KKN dan masyarakat Kelurahan
-                Plosokerep. Kepedulian dan solidaritas, menunjukkan bahwa
-                kegiatan bukan sekadar tugas akademik, tetapi juga bentuk kasih
-                sayang dan kepedulian sosial. Integritas dan komitmen,
-                menegaskan bahwa setiap aksi membawa tanggung jawab moral.
-              </span>
-            </p>
-          </div>
-
-          <div className="rounded-lg border-l-4 border-purple-500 bg-zinc-50 p-4 dark:bg-purple-950">
-            <p className="text-justify">
-              <span className="font-semibold text-purple-700 dark:text-purple-400">
-                Ornamen atau Pola Dekoratif di Lingkaran :
-              </span>
-              <span className="ml-2">
-                Menunjukkan kekayaan budaya lokal Plosokerep yang dijunjung
-                tinggi selama pelaksanaan KKN. Memberi sentuhan estetika yang
-                menunjukkan nilai-nilai spiritual dan etis, selaras dengan
-                semangat UNISBA sebagai institusi yang menjunjung nilai-nilai
-                islami.
-              </span>
-            </p>
-          </div>
-        </div>
+        {/* Deskripsi */}
+        <motion.div
+          className="space-y-6 leading-relaxed text-zinc-700 dark:text-zinc-300"
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          {[
+            {
+              color: "blue",
+              title: "Lingkaran Utama :",
+              content:
+                "Melambangkan kesatuan, kontinuitas, dan komitmen berkelanjutan kelompok KKN terhadap pengabdian masyarakat. Bentuk melingkar menyiratkan semangat kolaboratif tanpa ujung, di mana setiap individu saling mendukung dalam harmoni.",
+            },
+            {
+              color: "green",
+              title: "Simbol Tangan Berjabat Mewakili :",
+              content:
+                "Kerja sama erat antara mahasiswa KKN dan masyarakat Kelurahan Plosokerep. Kepedulian dan solidaritas, menunjukkan bahwa kegiatan bukan sekadar tugas akademik, tetapi juga bentuk kasih sayang dan kepedulian sosial. Integritas dan komitmen, menegaskan bahwa setiap aksi membawa tanggung jawab moral.",
+            },
+            {
+              color: "purple",
+              title: "Ornamen atau Pola Dekoratif di Lingkaran :",
+              content:
+                "Menunjukkan kekayaan budaya lokal Plosokerep yang dijunjung tinggi selama pelaksanaan KKN. Memberi sentuhan estetika yang menunjukkan nilai-nilai spiritual dan etis, selaras dengan semangat UNISBA sebagai institusi yang menjunjung nilai-nilai islami.",
+            },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              className={`rounded-lg border-l-4 border-${item.color}-500 bg-zinc-50 p-4 dark:bg-${item.color}-950`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-justify">
+                <span
+                  className={`font-semibold text-${item.color}-700 dark:text-${item.color}-400`}
+                >
+                  {item.title}
+                </span>
+                <span className="ml-2">{item.content}</span>
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
       </main>
     </section>
   );

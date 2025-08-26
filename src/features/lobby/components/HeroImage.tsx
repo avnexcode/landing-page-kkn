@@ -89,6 +89,7 @@ export const HeroImage = () => {
                     width={20000}
                     height={20000}
                     className="h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </CarouselItem>

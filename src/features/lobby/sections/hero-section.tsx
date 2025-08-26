@@ -1,11 +1,12 @@
 import { InstagramIcon, TikTokIcon } from "@/components/elements/icons";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Heading } from "@/components/ui/heading";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { HeroImage } from "../components";
-import { useTheme } from "next-themes";
-import { Heading } from "@/components/ui/heading";
 
 type HeroSectionProps = {
   sectionId: string;
@@ -14,18 +15,35 @@ type HeroSectionProps = {
 
 export const HeroSection = ({ sectionId, className }: HeroSectionProps) => {
   const { theme } = useTheme();
+
   return (
     <section id={sectionId} className={cn("w-full", className)}>
       <div className="mx-auto grid place-items-center gap-8 lg:max-w-screen-xl">
-        <div className="space-y-8 text-center">
-          <Badge variant="outline" className="py-2 text-sm">
-            <span className="text-primary">
-              <Badge>KKN 2025</Badge>
-            </span>
-            <span> Program Pemberdayaan Masyarakat </span>
-          </Badge>
+        <motion.div
+          className="space-y-8 text-center"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            <Badge variant="outline" className="py-2 text-sm">
+              <span className="text-primary">
+                <Badge>KKN 2025</Badge>
+              </span>
+              <span> Program Pemberdayaan Masyarakat </span>
+            </Badge>
+          </motion.div>
 
-          <div className="mx-auto max-w-screen-lg">
+          <motion.div
+            className="mx-auto max-w-screen-lg"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.7 }}
+          >
             <Heading className="text-center uppercase">
               Kuliah Kerja Nyata
               <span className="to-primary bg-gradient-to-r from-[#D247BF] bg-clip-text px-2 text-center text-transparent">
@@ -33,9 +51,14 @@ export const HeroSection = ({ sectionId, className }: HeroSectionProps) => {
               </span>
               2025
             </Heading>
-          </div>
+          </motion.div>
 
-          <div className="mx-auto max-w-screen-md">
+          <motion.div
+            className="mx-auto max-w-screen-md"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.7 }}
+          >
             <Heading size={"h2"} className="text-foreground mb-4 text-center">
               Pemberdayaan Produk UMKM Berbasis Kearifan Lokal
             </Heading>
@@ -44,15 +67,25 @@ export const HeroSection = ({ sectionId, className }: HeroSectionProps) => {
               Plosokerep, Kecamatan Sananwetan, Kota Blitar Mandiri dan
               Sejahtera
             </Heading>
-          </div>
+          </motion.div>
 
-          <p className="text-muted-foreground mx-auto max-w-screen-sm text-xl">
+          <motion.p
+            className="text-muted-foreground mx-auto max-w-screen-sm text-xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.7 }}
+          >
             Bersama membangun ekonomi kerakyatan yang berkelanjutan melalui
             pemberdayaan UMKM lokal dan penguatan koperasi sebagai pilar
             perekonomian masyarakat.
-          </p>
+          </motion.p>
 
-          <div className="space-y-4 md:space-y-0 md:space-x-4">
+          <motion.div
+            className="space-y-4 md:space-y-0 md:space-x-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.7 }}
+          >
             <Button asChild className="group/arrow w-5/6 font-bold md:w-1/4">
               <Link
                 href={"https://www.instagram.com/kkn_plosokerep2025/"}
@@ -76,16 +109,33 @@ export const HeroSection = ({ sectionId, className }: HeroSectionProps) => {
                 Tiktok
               </Link>
             </Button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="group relative mt-14">
-          <div className="bg-primary/50 absolute top-2 left-1/2 mx-auto h-24 w-[90%] -translate-x-1/2 transform rounded-full blur-3xl lg:-top-8 lg:h-80" />
+        {/* Hero Image Section */}
+        <motion.div
+          className="group relative mt-14"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+        >
+          <motion.div
+            className="bg-primary/50 absolute top-2 left-1/2 mx-auto h-24 w-[90%] -translate-x-1/2 transform rounded-full blur-3xl lg:-top-8 lg:h-80"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.6 }}
+            transition={{ delay: 1.4, duration: 1 }}
+          />
 
-          <HeroImage />
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 1.5, duration: 0.8 }}
+          >
+            <HeroImage />
+          </motion.div>
 
           <div className="from-background/0 via-background/50 to-background absolute bottom-0 left-0 h-20 w-full bg-gradient-to-b md:h-28" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
