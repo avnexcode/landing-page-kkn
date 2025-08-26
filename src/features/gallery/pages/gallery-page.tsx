@@ -10,6 +10,7 @@ import {
 import { GalleryGrid, ImageViewer } from "../components";
 import type { Gallery } from "../types";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export const GalleryPage = () => {
   const { data: gallery, isLoading: isGalleryLoading } =
@@ -98,7 +99,13 @@ export const GalleryPage = () => {
   return (
     <PageContainer withHeader withFooter title="Gallery">
       <SectionContainer container className="mb-10 pt-20 xl:mb-20 xl:pt-32">
-        <Heading className="mb-20 text-center">Gallery</Heading>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <Heading className="mb-20 text-center">Gallery</Heading>
+        </motion.div>
 
         <GalleryGrid
           galleryItems={gallery}

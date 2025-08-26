@@ -4,6 +4,7 @@ import { CircleChevronRight, Users } from "lucide-react";
 import Link from "next/link";
 import { TeamProfileCard } from "./TeamProfileCard";
 import type { Student } from "../types";
+import { motion } from "framer-motion";
 
 type TeamListProps = {
   className?: string;
@@ -69,37 +70,65 @@ export const TeamList = ({
   }
 
   return (
-    <div
+    <motion.div
       className={cn(
         "grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
         className,
       )}
+      initial="hidden"
+      animate="show"
+      variants={{
+        hidden: {},
+        show: {
+          transition: {
+            staggerChildren: 0.15, // tiap card muncul bergantian
+          },
+        },
+      }}
     >
       {renderElements({
         of: displayedMembers,
         keyExtractor: (teamMember) => teamMember.id,
-        render: (teamMember) => <TeamProfileCard student={teamMember} />,
+        render: (teamMember) => (
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              show: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <TeamProfileCard student={teamMember} />
+          </motion.div>
+        ),
       })}
 
       {showMoreButton && hasMorePages && (
-        <Link
-          href="/team"
-          className="group bg-background border-border hover:bg-muted/60 hover:border-border/80 flex flex-col items-center justify-center gap-2 rounded-xl border p-4 shadow-sm transition-all duration-300 hover:shadow-md"
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            show: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <CircleChevronRight
-            size={40}
-            className="text-primary transition-transform duration-300 group-hover:scale-110"
-          />
-          <span className="text-foreground group-hover:text-primary text-base font-medium transition-colors duration-300">
-            Lihat Selengkapnya
-          </span>
-          {total && currentLimit && (
-            <span className="text-muted-foreground text-sm">
-              {displayedMembers.length} dari {total} mahasiswa
+          <Link
+            href="/team"
+            className="group bg-background border-border hover:bg-muted/60 hover:border-border/80 flex flex-col items-center justify-center gap-2 rounded-xl border p-4 shadow-sm transition-all duration-300 hover:shadow-md"
+          >
+            <CircleChevronRight
+              size={40}
+              className="text-primary transition-transform duration-300 group-hover:scale-110"
+            />
+            <span className="text-foreground group-hover:text-primary text-base font-medium transition-colors duration-300">
+              Lihat Selengkapnya
             </span>
-          )}
-        </Link>
+            {total && currentLimit && (
+              <span className="text-muted-foreground text-sm">
+                {displayedMembers.length} dari {total} mahasiswa
+              </span>
+            )}
+          </Link>
+        </motion.div>
       )}
-    </div>
+    </motion.div>
   );
 };

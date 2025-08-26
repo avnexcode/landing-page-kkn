@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { renderElements } from "@/utils";
+import { motion, type Variants } from "framer-motion";
 import { GalleryCardSkeleton } from "../skeleton";
 import type { Gallery } from "../types";
 import { GalleryCard } from "./GalleryCard";
@@ -41,8 +42,32 @@ export const GalleryGrid = ({
     }
   };
 
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.8, // mulai agak kecil
+    },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.4, ease: "easeOut" },
+    },
+  };
+
   return (
-    <div
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
       className={cn(
         "grid auto-rows-max gap-4",
         "items-center",
@@ -55,8 +80,9 @@ export const GalleryGrid = ({
         of: galleryItems,
         keyExtractor: (galleryItem) => galleryItem.id,
         render: (galleryItem) => (
-          <div
+          <motion.div
             key={galleryItem.id}
+            variants={itemVariants}
             className={cn(
               galleryItem.orientation === "portrait"
                 ? "col-span-1 sm:col-span-2 lg:col-span-2 xl:col-span-3"
@@ -67,11 +93,10 @@ export const GalleryGrid = ({
               gallery={galleryItem}
               onViewImage={onViewImage}
               onDownloadImage={onDownloadImage}
-              // className="max-h-[600px]"
             />
-          </div>
+          </motion.div>
         ),
       })}
-    </div>
+    </motion.div>
   );
 };
