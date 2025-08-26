@@ -1,5 +1,6 @@
 import { Heading } from "@/components/ui/heading";
 import { cn } from "@/lib/utils";
+import { renderElements } from "@/utils";
 import { motion } from "framer-motion";
 
 type VMSectionProps = {
@@ -8,6 +9,30 @@ type VMSectionProps = {
 };
 
 export const VMSection = ({ sectionId, className }: VMSectionProps) => {
+  const vms = [
+    {
+      index: "1a",
+      color: "green",
+      text: "Melaksanakan kegiatan pengabdian masyarakat yang berfokus pada peningkatan kualitas hidup masyarakat Plosokerep.",
+    },
+    {
+      index: "2b",
+      color: "purple",
+      text: "Membangun sinergi antara mahasiswa, masyarakat, dan pemerintah daerah dalam mengembangkan potensi lokal.",
+    },
+    {
+      index: "3c",
+      text: "Mengimplementasikan nilai-nilai akademik dan spiritual dalam setiap kegiatan pelayanan masyarakat.",
+    },
+  ];
+
+  const colorVariants: Record<string, string> = {
+    green: "border-green-500 bg-green-50 dark:bg-green-950",
+    purple: "border-purple-500 bg-purple-50 dark:bg-purple-950",
+    blue: "border-blue-500 bg-blue-50 dark:bg-blue-950",
+    default: "border-zinc-400 bg-zinc-50 dark:bg-zinc-900",
+  };
+
   return (
     <section id={sectionId} className={cn("py-12", className)}>
       {/* Judul */}
@@ -54,37 +79,33 @@ export const VMSection = ({ sectionId, className }: VMSectionProps) => {
               Misi
             </h5>
             <div className="space-y-3">
-              {[
-                {
-                  color: "green",
-                  text: "Melaksanakan kegiatan pengabdian masyarakat yang berfokus pada peningkatan kualitas hidup masyarakat Plosokerep.",
-                },
-                {
-                  color: "purple",
-                  text: "Membangun sinergi antara mahasiswa, masyarakat, dan pemerintah daerah dalam mengembangkan potensi lokal.",
-                },
-                {
-                  color: "yellow",
-                  text: "Mengimplementasikan nilai-nilai akademik dan spiritual dalam setiap kegiatan pelayanan masyarakat.",
-                },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  className={`rounded-lg border-l-4 border-${item.color}-500 bg-${item.color}-50 p-4 dark:bg-${item.color}-950`}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.6,
-                    ease: "easeOut",
-                    delay: i * 0.2,
-                  }}
-                  viewport={{ once: true }}
-                >
-                  <p className="text-justify leading-relaxed text-zinc-700 dark:text-zinc-200">
-                    {item.text}
-                  </p>
-                </motion.div>
-              ))}
+              {renderElements({
+                of: vms,
+                keyExtractor: (vm) => vm.index,
+                render: (vm, i) => (
+                  <motion.div
+                    key={i}
+                    className={cn(
+                      "rounded-lg border-l-4 p-4",
+                      vm.color
+                        ? colorVariants[vm.color]
+                        : colorVariants.default,
+                    )}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.6,
+                      ease: "easeOut",
+                      delay: i * 0.2,
+                    }}
+                    viewport={{ once: true }}
+                  >
+                    <p className="text-justify leading-relaxed text-zinc-700 dark:text-zinc-200">
+                      {vm.text}
+                    </p>
+                  </motion.div>
+                ),
+              })}
             </div>
           </motion.div>
 

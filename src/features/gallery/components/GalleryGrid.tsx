@@ -54,7 +54,7 @@ export const GalleryGrid = ({
   const itemVariants: Variants = {
     hidden: {
       opacity: 0,
-      scale: 0.8, // mulai agak kecil
+      scale: 0.8,
     },
     show: {
       opacity: 1,
