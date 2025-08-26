@@ -5,9 +5,21 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
-export const ScheduleCardSkeleton = () => (
-  <Card className="group border-border/50 transition-all duration-300 hover:shadow-lg">
+type ScheduleCardSkeletonProps = {
+  className?: string;
+};
+
+export const ScheduleCardSkeleton = ({
+  className,
+}: ScheduleCardSkeletonProps) => (
+  <Card
+    className={cn(
+      "group border-border/50 transition-all duration-300 hover:shadow-lg",
+      className,
+    )}
+  >
     <CardHeader className="pb-4">
       <div className="flex items-center justify-between">
         <Skeleton className="bg-muted h-6 w-20" />

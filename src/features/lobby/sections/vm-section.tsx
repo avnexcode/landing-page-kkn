@@ -35,10 +35,10 @@ export const VMSection = ({ sectionId, className }: VMSectionProps) => {
 
   return (
     <section id={sectionId} className={cn("py-12", className)}>
-      {/* Judul */}
+      {/* Judul pakai animasi scale */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
       >
@@ -49,11 +49,11 @@ export const VMSection = ({ sectionId, className }: VMSectionProps) => {
 
       <main className="pt-10">
         <div className="prose max-w-none text-zinc-700 dark:text-zinc-300">
-          {/* Visi */}
+          {/* Visi muncul dari bawah */}
           <motion.div
             className="mb-6"
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
           >
@@ -67,11 +67,11 @@ export const VMSection = ({ sectionId, className }: VMSectionProps) => {
             </p>
           </motion.div>
 
-          {/* Misi */}
+          {/* Misi muncul dari bawah */}
           <motion.div
             className="mb-6"
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
           >
@@ -109,10 +109,10 @@ export const VMSection = ({ sectionId, className }: VMSectionProps) => {
             </div>
           </motion.div>
 
-          {/* Komitmen */}
+          {/* Komitmen muncul dari atas */}
           <motion.div
             className="bg-background rounded-lg border border-zinc-200 p-6"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
             viewport={{ once: true }}

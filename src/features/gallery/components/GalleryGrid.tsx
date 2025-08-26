@@ -13,6 +13,27 @@ type GalleryGridProps = {
   className?: string;
 };
 
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+  },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.4, ease: "easeOut" },
+  },
+};
+
 export const GalleryGrid = ({
   galleryItems,
   isGalleryLoading,
@@ -40,27 +61,6 @@ export const GalleryGrid = ({
         );
       });
     }
-  };
-
-  const containerVariants = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.08,
-      },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.8,
-    },
-    show: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.4, ease: "easeOut" },
-    },
   };
 
   return (

@@ -44,9 +44,10 @@ export const AboutSection = ({ sectionId, className }: AboutSectionProps) => {
 
   return (
     <section id={sectionId} className={cn("", className)}>
+      {/* Heading pakai animasi scale */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
       >
@@ -56,10 +57,11 @@ export const AboutSection = ({ sectionId, className }: AboutSectionProps) => {
       </motion.div>
 
       <main className="grid gap-5 pt-10 xl:grid-cols-2">
+        {/* Bagian detail pakai animasi dari bawah ke atas */}
         <motion.div
           className="space-y-4 xl:space-y-6"
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
         >
@@ -70,7 +72,7 @@ export const AboutSection = ({ sectionId, className }: AboutSectionProps) => {
               <motion.div
                 key={detail.label}
                 className="group border-border bg-muted/50 hover:border-border/80 hover:bg-muted/80 hover:shadow-primary/5 relative rounded-xl border p-2 backdrop-blur-sm transition-all duration-300 hover:shadow-lg"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 viewport={{ once: true }}
@@ -103,10 +105,11 @@ export const AboutSection = ({ sectionId, className }: AboutSectionProps) => {
           })}
         </motion.div>
 
+        {/* Deskripsi teks pakai animasi dari atas ke bawah */}
         <motion.div
           className="text-foreground space-y-5 text-justify"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
           viewport={{ once: true }}
         >

@@ -44,10 +44,10 @@ export const PhilosophySection = ({
 
   return (
     <section id={sectionId} className={cn("py-12", className)}>
-      {/* Judul */}
+      {/* Judul pakai animasi scale */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
       >
@@ -57,7 +57,7 @@ export const PhilosophySection = ({
       </motion.div>
 
       <main className="grid grid-cols-1 gap-5 pt-10 xl:grid-cols-2">
-        {/* Logo */}
+        {/* Logo dengan animasi scale */}
         <motion.div
           className="mb-8 flex w-full items-center justify-center"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -76,11 +76,11 @@ export const PhilosophySection = ({
           </div>
         </motion.div>
 
-        {/* Deskripsi */}
+        {/* Deskripsi filosofi dengan animasi dari bawah ke atas */}
         <motion.div
           className="space-y-6 leading-relaxed text-zinc-700 dark:text-zinc-300"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
         >

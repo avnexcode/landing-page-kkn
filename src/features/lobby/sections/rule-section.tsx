@@ -10,7 +10,7 @@ type RuleSectionProps = {
 
 export const RuleSection = ({ sectionId, className }: RuleSectionProps) => {
   return (
-    <section id={sectionId} className={cn("", className)}>
+    <section id={sectionId} className={cn("py-12", className)}>
       {/* Judul */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -18,7 +18,7 @@ export const RuleSection = ({ sectionId, className }: RuleSectionProps) => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <Heading size={"h3"} className="text-center uppercase">
+        <Heading size="h3" className="text-center uppercase">
           Peraturan & Ketentuan
         </Heading>
       </motion.div>
@@ -31,7 +31,9 @@ export const RuleSection = ({ sectionId, className }: RuleSectionProps) => {
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <RuleList />
+        <div className="prose max-w-none text-zinc-700 dark:text-zinc-300">
+          <RuleList />
+        </div>
       </motion.main>
     </section>
   );

@@ -43,3 +43,31 @@ export interface Gallery {
   image: string;
   orientation: "landscape" | "portrait";
 }
+
+export type CloudName =
+  | "drive"
+  | "onedrive"
+  | "dropbox"
+  | "mega"
+  | "icloud"
+  | "box"
+  | "pcloud"
+  | "mediafire"
+  | "amazon"
+  | "yandex"
+  | "nextcloud"
+  | "owncloud";
+
+export interface Documentation {
+  id: string;
+  title: string;
+  url: string;
+  password?: string;
+  file_type: "zip" | "tar" | "7z" | "rar";
+  type: "list" | "hero";
+  size: {
+    total: number;
+    type: "kb" | "mb" | "gb" | "tb";
+  };
+  cloud_name: CloudName;
+}
