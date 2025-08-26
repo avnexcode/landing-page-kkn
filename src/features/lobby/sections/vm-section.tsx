@@ -100,7 +100,7 @@ export const VMSection = ({ sectionId, className }: VMSectionProps) => {
                     }}
                     viewport={{ once: true }}
                   >
-                    <p className="text-justify leading-relaxed text-zinc-700 dark:text-zinc-200">
+                    <p className="text-primary text-justify leading-relaxed">
                       {vm.text}
                     </p>
                   </motion.div>
@@ -111,7 +111,7 @@ export const VMSection = ({ sectionId, className }: VMSectionProps) => {
 
           {/* Komitmen */}
           <motion.div
-            className="rounded-lg border border-zinc-200 bg-zinc-50 p-6 dark:border-zinc-700 dark:bg-zinc-900"
+            className="bg-background rounded-lg border border-zinc-200 p-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}

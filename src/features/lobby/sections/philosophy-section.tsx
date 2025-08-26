@@ -103,7 +103,7 @@ export const PhilosophySection = ({
                 }}
                 viewport={{ once: true }}
               >
-                <p className="text-justify">
+                <p className="text-primary text-justify">
                   <span className="font-semibold">{philosophy.title}</span>
                   <span className="ml-2">{philosophy.content}</span>
                 </p>
