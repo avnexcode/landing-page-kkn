@@ -5,6 +5,7 @@ import { renderElements } from "@/utils";
 import type { icons } from "lucide-react";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type AboutSectionProps = {
   sectionId: string;
@@ -103,6 +104,33 @@ export const AboutSection = ({ sectionId, className }: AboutSectionProps) => {
               </motion.div>
             ),
           })}
+          <motion.div
+            className="group border-border bg-muted/50 hover:border-border/80 hover:bg-muted/80 hover:shadow-primary/5 relative rounded-xl border p-2 backdrop-blur-sm transition-all duration-300 hover:shadow-lg"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 2 * 0.2 }}
+            viewport={{ once: true }}
+          >
+            <Link href={"/documentation"} className="flex items-start gap-4">
+              <div className="border-border from-background to-muted/50 group-hover:from-muted/20 group-hover:to-muted/80 flex-shrink-0 rounded-lg border bg-gradient-to-br p-3 transition-all duration-300">
+                <Icon
+                  name={"Camera" as keyof typeof icons}
+                  color={theme === "dark" ? "#fff" : "#000"}
+                  size={40}
+                  className="transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h1 className="text-foreground group-hover:text-foreground/90 mb-2 text-lg font-semibold capitalize transition-colors duration-300 xl:text-xl">
+                  Dokumentasi
+                </h1>
+                <p className="text-muted-foreground group-hover:text-muted-foreground/80 leading-relaxed transition-colors duration-300">
+                  Download dokumentasi disini
+                </p>
+              </div>
+            </Link>
+            <div className="via-primary/10 absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+          </motion.div>
         </motion.div>
 
         {/* Deskripsi teks pakai animasi dari atas ke bawah */}

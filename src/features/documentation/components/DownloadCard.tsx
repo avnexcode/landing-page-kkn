@@ -50,22 +50,22 @@ export const DownloadCard = ({
         <div className="flex items-center justify-between">
           <CardTitle
             className={cn(
-              "text-foreground group-hover:text-primary line-clamp-1 font-semibold capitalize transition-colors",
+              "text-foreground group-hover:text-primary line-clamp-1 flex items-center gap-2 font-semibold capitalize transition-colors",
               isHero ? "text-xl" : "text-lg",
             )}
           >
+            <div className="bg-primary/10 flex h-8 w-8 items-center justify-center rounded-full">
+              <Icon
+                name={fileTypeIcon.icon as keyof typeof icons}
+                className={fileTypeIcon.className}
+              />
+            </div>{" "}
             {documentation.title}
           </CardTitle>
           <div className="flex items-center gap-2">
             <Badge variant={"secondary"} className="uppercase">
               {documentation.file_type}
             </Badge>
-            <div className="bg-primary/10 flex h-8 w-8 items-center justify-center rounded-full">
-              <Icon
-                name={fileTypeIcon.icon as keyof typeof icons}
-                className={fileTypeIcon.className}
-              />
-            </div>
           </div>
         </div>
       </CardHeader>
@@ -76,7 +76,7 @@ export const DownloadCard = ({
         <div className="space-y-1">
           <div className="bg-muted/20 border-border/20 flex items-center justify-between rounded-lg border p-3">
             <span className="text-muted-foreground flex items-center gap-2 text-sm">
-              <Download className="h-3 w-3" />
+              <Download className="h-3.5 w-3.5" />
               Ukuran File:
             </span>
             <span className={cn("text-sm font-bold", sizeColor)}>
@@ -87,16 +87,17 @@ export const DownloadCard = ({
           {documentation.password && (
             <div className="bg-muted/30 border-border/20 rounded-lg border p-3">
               <div className="flex items-center justify-between">
-                <span className="text-muted-foreground flex items-center gap-1 text-sm">
-                  <Lock className="h-3 w-3" />
+                <span className="text-muted-foreground flex items-center gap-2 text-sm">
+                  <Lock className="h-3.5 w-3.5" />
                   Password:
                 </span>
                 <div className="flex items-center">
                   <span className="text-foreground bg-background/80 rounded border px-2 py-1 font-mono text-xs font-medium">
-                    {/* {documentation.password} */}
                     ****************
                   </span>
-                  <PasswordCopyButton password={documentation.password} />
+                  {documentation.password_type === "show" ? (
+                    <PasswordCopyButton password={documentation.password} />
+                  ) : null}
                 </div>
               </div>
             </div>

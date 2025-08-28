@@ -4,7 +4,8 @@ export type Documentation = {
   id: string;
   title: string;
   url: string;
-  password?: string;
+  password: string;
+  password_type: "hidden" | "show";
   file_type: "zip" | "tar" | "7z" | "rar";
   type: "list" | "hero";
   size: {

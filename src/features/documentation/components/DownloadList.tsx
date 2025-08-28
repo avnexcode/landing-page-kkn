@@ -37,7 +37,7 @@ export const DownloadList = ({
       initial="hidden"
       animate="show"
       className={cn(
-        "grid grid-cols-1 items-center justify-center gap-5 md:grid-cols-2 lg:grid-cols-3",
+        "grid grid-cols-1 items-center justify-center gap-5 md:grid-cols-2 xl:grid-cols-3",
         className,
       )}
     >

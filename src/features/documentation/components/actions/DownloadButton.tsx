@@ -16,7 +16,7 @@ export const DownloadButton = ({
   fileUrl,
 }: DownloadButtonProps) => {
   const handleDownloadFile = () => {
-    window.open(fileUrl, "_blank"); // buka di tab baru
+    window.open(fileUrl, "_blank");
   };
   return (
     <Button
@@ -37,7 +37,7 @@ export const DownloadButton = ({
           <p className="text-foreground text-sm leading-none font-medium">
             Download File
           </p>
-          <p className="text-muted-foreground mt-1 text-sm">
+          <p className="text-muted-foreground mt-1 text-xs font-semibold">
             Via {cloudName} • {formattedSize}
           </p>
         </div>
