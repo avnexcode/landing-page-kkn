@@ -36,7 +36,7 @@ export const getSizeColor = (size: {
   else if (type === "gb") sizeInMB = total * 1024;
   else if (type === "tb") sizeInMB = total * 1024 * 1024;
 
-  if (sizeInMB < 10) return "text-white";
+  if (sizeInMB < 10) return "text-primary";
   if (sizeInMB < 100) return "text-green-600";
   if (sizeInMB < 1000) return "text-blue-600";
   return "text-orange-500";
