@@ -7,7 +7,7 @@ export type Documentation = {
   password: string;
   password_type: "hidden" | "show";
   file_type: "zip" | "tar" | "7z" | "rar";
-  type: "list" | "hero";
+  type: "general" | "job";
   size: {
     total: number;
     type: "kb" | "mb" | "gb" | "tb";

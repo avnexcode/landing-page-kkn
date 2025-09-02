@@ -6,8 +6,10 @@ export const useQueryParams = <
 >() => {
   const router = useRouter();
 
+  const isReady = router.isReady;
+
   const queryParams = {
-    search: router.query.search as string,
+    search: (router.query.search as string) || "",
     limit: Number(router.query.limit) || 8,
     page: Number(router.query.page) || 1,
     division: (router.query.division as DivisionParams) || undefined,
@@ -15,9 +17,10 @@ export const useQueryParams = <
   };
 
   const handleUpdateQuery = (newParams: Partial<typeof queryParams>) => {
+    if (!isReady) return;
+
     const updatedQuery = { ...router.query };
 
-    // Update parameters with new values
     Object.entries(newParams).forEach(([key, value]) => {
       if (value === undefined || value === null || value === "") {
         delete updatedQuery[key];
@@ -26,7 +29,6 @@ export const useQueryParams = <
       }
     });
 
-    // Reset page to 1 when filters change (except when only updating page or limit)
     const isFilterChange = Object.keys(newParams).some((key) =>
       ["search", "division", "program"].includes(key),
     );
@@ -45,15 +47,15 @@ export const useQueryParams = <
     );
   };
 
-  // Specialized method for updating filters that should reset pagination
   const handleUpdateFilter = (
     newParams: Partial<
       Pick<typeof queryParams, "search" | "division" | "program">
     >,
   ) => {
+    if (!isReady) return;
+
     const updatedQuery = { ...router.query };
 
-    // Update filter parameters
     Object.entries(newParams).forEach(([key, value]) => {
       if (value === undefined || value === null || value === "") {
         delete updatedQuery[key];
@@ -62,7 +64,6 @@ export const useQueryParams = <
       }
     });
 
-    // Always reset page to 1 when filters change
     updatedQuery.page = "1";
 
     void router.push(
@@ -75,10 +76,11 @@ export const useQueryParams = <
     );
   };
 
-  // Specialized method for pagination that doesn't affect filters
   const handleUpdatePagination = (
     newParams: Partial<Pick<typeof queryParams, "page" | "limit">>,
   ) => {
+    if (!isReady) return;
+
     const updatedQuery = { ...router.query };
 
     Object.entries(newParams).forEach(([key, value]) => {
@@ -104,5 +106,6 @@ export const useQueryParams = <
     handleUpdateQuery,
     handleUpdateFilter,
     handleUpdatePagination,
+    isReady,
   };
 };

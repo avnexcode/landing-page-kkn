@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 import { Form } from "../ui/form";
 import { HiddenComponentFormInner } from "./HiddenComponentFormInner";
 import { toast } from "sonner";
+import { useRouter } from "next/router";
 
 export const passwordFormSchema = z.object({
   password: z
@@ -30,6 +31,7 @@ export const HiddenComponentForm = ({
   password,
   label,
 }: HiddenComponentFormProps) => {
+  const router = useRouter();
   const form = useForm<PasswordFormSchema>({
     defaultValues: {
       password: "",
@@ -41,6 +43,11 @@ export const HiddenComponentForm = ({
     if (form.getValues("password") === password) {
       setIsVisible(true);
       setIsEnabled(true);
+      void router.push({
+        query: {
+          pass: form.getValues("password"),
+        },
+      });
       toast.success("Akses berhasil dibuka");
     } else {
       toast.error("Password tidak sesuai");

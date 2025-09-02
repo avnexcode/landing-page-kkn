@@ -13,22 +13,37 @@ export const Searchbar = ({
   placeholder = "Search...",
   className,
 }: SearchbarProps) => {
-  const { queryParams, handleUpdateFilter } = useQueryParams();
-  const [searchValue, setSearchValue] = useState<string>(
-    queryParams.search || "",
-  );
+  const { queryParams, handleUpdateFilter, isReady } = useQueryParams();
+
+  const [searchValue, setSearchValue] = useState<string>("");
+  const [isInitialized, setIsInitialized] = useState(false);
 
   const debouncedSearchValue = useDebounce(searchValue, 300);
 
   useEffect(() => {
-    if (debouncedSearchValue !== (queryParams.search || "")) {
-      handleUpdateFilter({ search: debouncedSearchValue || undefined });
+    if (isReady && !isInitialized) {
+      setSearchValue(queryParams.search || "");
+      setIsInitialized(true);
     }
-  }, [debouncedSearchValue, queryParams.search, handleUpdateFilter]);
+  }, [isReady, queryParams.search, isInitialized]);
 
   useEffect(() => {
-    setSearchValue(queryParams.search || "");
-  }, [queryParams.search]);
+    if (isInitialized && debouncedSearchValue !== (queryParams.search || "")) {
+      handleUpdateFilter({ search: debouncedSearchValue || undefined });
+    }
+  }, [
+    debouncedSearchValue,
+    queryParams.search,
+    handleUpdateFilter,
+    isInitialized,
+  ]);
+
+  useEffect(() => {
+    if (isInitialized && searchValue !== (queryParams.search || "")) {
+      setSearchValue(queryParams.search || "");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [queryParams.search, isInitialized]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);

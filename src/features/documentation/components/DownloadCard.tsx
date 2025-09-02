@@ -13,7 +13,6 @@ import type { Documentation } from "../types";
 import {
   formatFileSize,
   getCloudDisplayName,
-  getFileTypeDescription,
   getFileTypeIcon,
   getSizeColor,
 } from "../utils";
@@ -28,7 +27,7 @@ export const DownloadCard = ({
   className,
   documentation,
 }: DownloadCardProps) => {
-  const isHero = documentation.type === "hero";
+  const isHero = documentation.type === "job";
   const formattedSize = formatFileSize(documentation.size);
   const sizeColor = getSizeColor(documentation.size);
   const fileTypeIcon = getFileTypeIcon(documentation.file_type);
@@ -60,7 +59,7 @@ export const DownloadCard = ({
                 className={fileTypeIcon.className}
               />
             </div>{" "}
-            {documentation.title}
+            <span className="">{documentation.title}</span>
           </CardTitle>
           <div className="flex items-center gap-2">
             <Badge variant={"secondary"} className="uppercase">
@@ -103,47 +102,6 @@ export const DownloadCard = ({
             </div>
           )}
         </div>
-
-        {isHero && (
-          <div className="space-y-3 pt-2">
-            {/* File Type Description */}
-            <div className="from-muted/30 to-muted/10 border-border/30 rounded-md border bg-gradient-to-r p-4">
-              <div className="flex items-start gap-3">
-                <div className="mt-1 flex-shrink-0">
-                  <Icon
-                    name={fileTypeIcon.icon as keyof typeof icons}
-                    className={fileTypeIcon.className}
-                  />
-                </div>
-                <div>
-                  <p className="text-foreground mb-1 text-sm font-medium">
-                    {documentation.file_type.toUpperCase()} Archive
-                  </p>
-                  <p className="text-muted-foreground text-xs leading-relaxed">
-                    {getFileTypeDescription(documentation.file_type)}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Download Info */}
-            <div className="from-primary/5 border-border/20 rounded-md border bg-gradient-to-r to-transparent p-3">
-              <div className="mb-2 flex items-center gap-2">
-                <div className="bg-primary h-2 w-2 animate-pulse rounded-full"></div>
-                <span className="text-foreground text-sm font-medium">
-                  Download Information
-                </span>
-              </div>
-              <p className="text-muted-foreground pl-4 text-xs leading-relaxed">
-                File akan diunduh dari {cloudName} dalam format{" "}
-                {documentation.file_type.toUpperCase()}.
-                {documentation.password
-                  ? " Gunakan password yang disediakan untuk ekstraksi file."
-                  : " File tidak memerlukan password."}
-              </p>
-            </div>
-          </div>
-        )}
       </CardContent>
 
       <CardFooter className={cn(isHero ? "px-6 pt-4" : "px-4", "relative")}>

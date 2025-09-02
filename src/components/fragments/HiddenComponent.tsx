@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
-import { forwardRef, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import { HiddenComponentForm } from "./HiddenComponentForm";
+import { useSearchParams } from "next/navigation";
 
 type HiddenComponentProps = {
   setIsEnabled: (isEnabled: boolean) => void;
@@ -13,6 +14,16 @@ export const HiddenComponent = forwardRef<
   React.HTMLAttributes<HTMLDivElement> & HiddenComponentProps
 >(({ className, children, setIsEnabled, password, label, ...props }, ref) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  const searchParams = useSearchParams();
+  const passwordParam = searchParams.get("pass");
+
+  useEffect(() => {
+    if (passwordParam === password) {
+      setIsVisible(true);
+      setIsEnabled(true);
+    }
+  }, [password, passwordParam, setIsEnabled]);
 
   return (
     <div ref={ref} className={cn("w-full", className)} {...props}>
