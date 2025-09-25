@@ -21,7 +21,7 @@ export const ThemeToggle = () => {
         <span className="block lg:hidden">Ligth</span>
       </div>
 
-      <span className="sr-only">Trocar de tema</span>
+      <span className="sr-only">Change theme</span>
     </Button>
   );
 };

@@ -15,6 +15,7 @@ import { Separator } from "../ui/separator";
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
@@ -59,7 +60,7 @@ export const Navbar = () => {
           width={40}
           height={40}
         />
-        KKN-12
+        {env.NEXT_PUBLIC_APP_NAME}
       </Link>
       {/* <!-- Mobile --> */}
       <MobileNav />
@@ -100,9 +101,10 @@ export const MobileNav = () => {
                     width={40}
                     height={40}
                   />
-                  KKN-12
+                  {env.NEXT_PUBLIC_APP_NAME}
                 </Link>
               </SheetTitle>
+              <SheetDescription className="hidden" />
             </SheetHeader>
 
             <div className="flex flex-col gap-2">
